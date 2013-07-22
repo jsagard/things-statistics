@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>columns</key>
+	<array>
+		<string>Last Month</string>
+	</array>
+	<key>rows</key>
+	<array>
+		<dict>
+			<key>rowName</key>
+			<string>Blog</string>
+			<key>rowValueTypes</key>
+			<array>
+				<integer>0</integer>
+			</array>
+			<key>rowValues</key>
+			<array>
+				<real>0.0</real>
+			</array>
+		</dict>
+		<dict>
+			<key>rowName</key>
+			<string>Music</string>
+			<key>rowValueTypes</key>
+			<array>
+				<integer>0</integer>
+			</array>
+			<key>rowValues</key>
+			<array>
+				<real>0.0</real>
+			</array>
+		</dict>
+		<dict>
+			<key>rowName</key>
+			<string>Programming &amp; Web Design</string>
+			<key>rowValueTypes</key>
+			<array>
+				<integer>0</integer>
+			</array>
+			<key>rowValues</key>
+			<array>
+				<real>6</real>
+			</array>
+		</dict>
+		<dict>
+			<key>rowName</key>
+			<string>Personal</string>
+			<key>rowValueTypes</key>
+			<array>
+				<integer>0</integer>
+			</array>
+			<key>rowValues</key>
+			<array>
+				<real>3</real>
+			</array>
+		</dict>
+		<dict>
+			<key>rowName</key>
+			<string>Routine</string>
+			<key>rowValueTypes</key>
+			<array>
+				<integer>0</integer>
+			</array>
+			<key>rowValues</key>
+			<array>
+				<real>1</real>
+			</array>
+		</dict>
+		<dict>
+			<key>rowName</key>
+			<string>None</string>
+			<key>rowValueTypes</key>
+			<array>
+				<integer>0</integer>
+			</array>
+			<key>rowValues</key>
+			<array>
+				<real>0.0</real>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
