@@ -5,18 +5,18 @@ Contents
 --------
 
 ### Main Script
-*Things-ExportToNumbers*
+*Things-ExportToNumbers* v. 1.0
 An AppleScript for exporting completed todos, completed projects and areas from Things application into the Numbers document "Things Statistics".
 
 ### File to calc and view your stats
-*Things Statistics*
+*Things Statistics* v. 1.0
 An Apple Numbers documents with predefined formulas and charts for calculate and review statistics of completed todos.
 
-### Supplementary scripts
+### Supplementary scripts v. 1.0
 *Things-DeleteLogbookItemsOlderDate*
 An AppleScript for deleting all items (completed todos and projects) from Logbook list of Things application that older than specific date.
 
-*Things-ExportToCSV*
+*Things-ExportToCSV* v. 1.0
 If you want export data from things into CSV file than you can use this script.
 
 Notes

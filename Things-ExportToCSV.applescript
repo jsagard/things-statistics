@@ -1,6 +1,8 @@
 #
 # Things-ExportToCSV.applescript
 #
+# Version 1.0
+#
 # If you want export data from things into CSV file than you can use this script.
 #
 # Things Statistics is released under the MIT license:

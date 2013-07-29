@@ -1,6 +1,8 @@
 #
 # Things-DeleteLogbookItemsOlderDate.applescript
 #
+# Version 1.0
+#
 # An AppleScript for deleting all items (completed todos and projects) from Logbook list of Things application that older than specific date.
 #
 # Things Statistics is released under the MIT license:

@@ -1,6 +1,8 @@
 #
 # Things-ExportToNumbers.applescript
 #
+# Version 1.0
+#
 # An AppleScript for exporting completed todos, completed projects and areas from Things application into the Numbers document "Things Statistics".
 #
 # Things Statistics is released under the MIT license:
