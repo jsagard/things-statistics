@@ -183,6 +183,33 @@ end setRowCountOfTable
 #
 # Delete the rows between start row and end row in a table in Numbers' document.
 # Start and end rows also will be deleted.
+# Suits for small ranges of rows (less than 10). 
+# !!! On large ranges this handler may freezes Numbers app. !!!
+#
+# startRow        integer              start of the row range to delete
+# endRow          integer              end of the row range to delete
+# documentName    string or integer    name or index of the target document
+# sheetName       string or integer    name or index of the target sheet
+# tableName       string or integer    name or index of the target table
+#
+# returns         nothing
+#
+on deleteFewRowsOfTable(startRow, endRow, documentName, sheetName, tableName)
+	tell application "Numbers"
+		tell document documentName
+			tell sheet sheetName
+				tell table tableName
+					delete (rows startRow thru endRow)
+				end tell
+			end tell
+		end tell
+	end tell
+end deleteFewRowsOfTable
+
+#
+# Delete the rows between start row and end row in a table in Numbers' document.
+# Start and end rows also will be deleted.
+# Suits for large ranges of rows (greater than 10).
 #
 # startRow        integer              start of the row range to delete
 # endRow          integer              end of the row range to delete
@@ -193,15 +220,24 @@ end setRowCountOfTable
 # returns         nothing
 #
 on deleteRowsOfTable(startRow, endRow, documentName, sheetName, tableName)
-	tell application "Numbers"
-		tell document documentName
-			tell sheet sheetName
-				tell table tableName
-					delete (rows startRow thru endRow)
-				end tell
-			end tell
-		end tell
-	end tell
+	set chunkSize to 25
+	# Sort out start and end row's numbers
+	if startRow > endRow then
+		set tmp to startRow
+		set startRow to endRow
+		set endRow to tmp
+	end if
+	set rangeValue to endRow - startRow
+	if rangeValue is less than chunkSize then -- if range of rows less than chunkSize, simply delete rows
+		my deleteFewRowsOfTable(startRow, endRow, documentName, sheetName, tableName)
+	else -- if range of rows greater than chunkSize, then delete rows by chunks
+		set chunksNumber to rangeValue div chunkSize
+		repeat with i from 1 to chunksNumber
+			my deleteFewRowsOfTable(endRow, (endRow - chunkSize + 1), documentName, sheetName, tableName)
+			set endRow to endRow - chunkSize
+		end repeat
+		my deleteFewRowsOfTable(startRow, endRow, documentName, sheetName, tableName)
+	end if
 end deleteRowsOfTable
 
 ###############
